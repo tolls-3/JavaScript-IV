@@ -92,9 +92,9 @@ class Student extends Person{
         name:'Rufus',
         location:'Lagos',
         age:'45',
-        // favLanguage:'PHP',
-        // specialty:'Back-end',
-        // catchPhrase:'Connect to source'
+        favLanguage:'PHP',
+        specialty:'Back-end',
+        catchPhrase:'Connect to source'
     });
 
 
@@ -114,7 +114,7 @@ class Student extends Person{
         location:'Abuja',
         age:22,
         previousBackground:'Fitness Instructor',
-        className:'WEBEU2',
+        className:'WEBEU3',
         favSubjects:'React'
     });
 
@@ -128,6 +128,29 @@ class Student extends Person{
     });
 
     // Project Managers Object
+    const Vebra = new ProjectManagers({
+        name:'Vebra',
+        location:'Ireland',
+        age:'28',
+        favLanguage:'JavaScript',
+        specialty:'Back-end',
+        catchPhrase:'Success!',
+        gradClassName:'WEBEU2',
+        favInstructor:'Gabe'
+    });
+
+    const Patty = new ProjectManagers({
+        name:'Patty',
+        location:'Switzerland',
+        age:'28',
+        favLanguage:'CSS',
+        specialty:'Front-end',
+        catchPhrase:'After Hours!',
+        gradClassName:'WEBEU2',
+        favInstructor:'Gabe'
+    });
+
+    
 
     
 
