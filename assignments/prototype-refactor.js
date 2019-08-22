@@ -69,7 +69,7 @@ let tolu=new Person2('Tolu',40);
     this.make= make;
     this.odometer=0;
     this.abilityToDrive=true;
-  
+
   Car.prototype.drive = function (distance) {
     this.odometer+=distance;
   }
@@ -88,8 +88,27 @@ let tolu=new Person2('Tolu',40);
   */
 
   //Refactored code using ES6 Classes for Task 2
+ 
+  class Car2{
+      constructor(modelName, make){
+        this.modelName = modelName;
+        this.make= make;
+        this.odometer=0;
+        this.abilityToDrive=true;
+      };
+      drive(distance){
+        this.odometer+=distance;
+      };
+      crash(){
+        this.abilityToDrive=false;
+        return `I crashed at ${this.odometer} miles`; 
+      };
+      repair(){
+        this.abilityToDrive=true;
+      };
+  };
 
-  class
+  let testCar = new Car2 ('Corolla','Toyota');
 
 
 //   class Animal2 {
