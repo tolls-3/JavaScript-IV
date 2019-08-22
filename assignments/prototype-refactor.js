@@ -110,6 +110,37 @@ let tolu=new Person2('Tolu',40);
 
   let testCar = new Car2 ('Corolla','Toyota');
 
+  /*TASK 3
+
+  - Build a Baby constructor that subclasses the Person built earlier.
+  - Babies of course inherit the ability to greet, which can be strange.
+  - Babies should have the ability to play, which persons don't.
+  - By playing, a string is returned with some text of your choosing.
+
+  function Baby (name, age, favToy) {
+    Person.call(this, name, age);
+    this.favToy = favToy;
+  }
+  Baby.prototype=Object.create(Person.prototype);
+  Baby.prototype.playWithToy = function () {
+    return `I love playing with my ${this.favToy}!`;
+  };
+
+
+  let Tody = new Baby('Tody',2,'Scrabble');
+  */
+
+  //Refactored code using ES6 Classes for Task 3
+  class Baby2 extends Person2{
+      constructor(name,age,favToy){
+        super(name,age);
+        this.favToy = favToy;
+      }
+      playWithToy(){
+        return `I love playing with my ${this.favToy}!`;
+      }
+  }
+  let Tody = new Baby2('Tody',2,'Scrabble');
 
 //   class Animal2 {
 //     constructor(name) {
