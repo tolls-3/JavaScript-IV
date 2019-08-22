@@ -273,27 +273,3 @@ let newCAT2 = new CAT2({
 
 
   
-
-//   class Animal2 {
-//     constructor(name) {
-//       this.name = name;
-//     }
-//     greet() {
-//       return this.name + '!!!!!'
-//     }
-//     growl() {
-//       return 'grrr'
-//     }
-//   }
-//   class FlyingAnimal2 extends Animal2 {
-//     constructor(name, wingspam) {
-//       super(name);
-//       this.wingspam = wingspam;
-//     }
-//     fly() {
-//       return `${this.name} is flying!!`;
-//     }
-//   }
-  
-//   var mouse = new Animal2('Mouse');
-//   var bat = new FlyingAnimal2('Bat', 5);
