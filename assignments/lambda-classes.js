@@ -1,30 +1,6 @@
 // CODE here for your Lambda Classes
 
-//   class Animal2 {
-//     constructor(name) {
-//       this.name = name;
-//     }
-//     greet() {
-//       return this.name + '!!!!!'
-//     }
-//     growl() {
-//       return 'grrr'
-//     }
-//   }
-//   class FlyingAnimal2 extends Animal2 {
-//     constructor(name, wingspam) {
-//       super(name);
-//       this.wingspam = wingspam;
-//     }
-//     fly() {
-//       return `${this.name} is flying!!`;
-//     }
-//   }
-  
-//   var mouse = new Animal2('Mouse');
-//   var bat = new FlyingAnimal2('Bat', 5);
-
-
+//Class for Person constructor
 class Person{
     constructor(param){
         this.name=param.name;
@@ -36,6 +12,7 @@ class Person{
       };	
 }
 
+//Class for Instructor constructor which is an extension of Person
 class Instructor extends Person{
     constructor(param){
         super(param);
@@ -43,6 +20,7 @@ class Instructor extends Person{
         this.favLanguage=param.favLanguage;
         this.catchPhrase=param.catchPhrase;
     };
+//Methods for Instructor constructor   
     demo(subject){
         console.log(`Today we are learning about ${subject}`);
     }
@@ -51,6 +29,7 @@ class Instructor extends Person{
     }
 };
 
+//Class for Student constructor which is an extension of Person
 class Student extends Person{
     constructor(param){
         super(param);
@@ -58,27 +37,29 @@ class Student extends Person{
         this.className=param.className;
         this.favSubjects=param.favSubjects;
     };
+//Methods for Student constructor    
     listSubjects(){
-        this.favSubjects.forEach(subject => {
+        this.favSubjects.forEach(function(subject) {
             console.log(`${subject}`);
     });
     }
-
     PRAssignment(subject){
         console.log(`${this.name} has submitted a PR for ${subject}`);
     };
-
     sprintChallenge(subject){
         console.log(`${this.name} has begun sprint challenge on ${subject}`);
     };
 };
 
+//Class for Project Managers constructor which is an extension of Instructor
     class ProjectManagers extends Instructor{
         constructor(param){
             super(param);
             this.gradClassName=param.gradClassName;
             this.favInstructor=param.favInstructor;
         };
+
+//Methods for Project Manager constructor        
         standUp(slackChannel){
             console.log(`${this.name} announces to ${slackChannel}, @channel standby times!`);
         };
@@ -87,6 +68,8 @@ class Student extends Person{
         }
     };
 
+
+//Instructor Objects   
     const fred = new Instructor({
         name: 'Fred',
         location: 'Bedrock',
@@ -96,6 +79,7 @@ class Student extends Person{
         catchPhrase: `Don't forget the homies`
       });
 
+      
 
 
 
