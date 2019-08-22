@@ -92,10 +92,44 @@ class Student extends Person{
         name:'Rufus',
         location:'Lagos',
         age:'45',
-        favLanguage:'PHP',
-        specialty:'Back-end',
-        catchPhrase:'Connect to source'
+        // favLanguage:'PHP',
+        // specialty:'Back-end',
+        // catchPhrase:'Connect to source'
     });
+
+
+    // Students Objects
+
+    const Tolu = new Student({
+        name:'Tolu',
+        location:'Lagos',
+        age:26,
+        previousBackground:'Building Management Systems',
+        className:'WEBEU3',
+        favSubjects:'JavaScript'
+    });
+
+    const Jane = new Student({
+        name:'Jane',
+        location:'Abuja',
+        age:22,
+        previousBackground:'Fitness Instructor',
+        className:'WEBEU2',
+        favSubjects:'React'
+    });
+
+    const Tody = new Student({
+        name:'Tody',
+        location:'Lagos',
+        age:28,
+        previousBackground:'Facility Manager',
+        className:'WEBEU4',
+        favSubjects:'CSS'
+    });
+
+    // Project Managers Object
+
+    
 
       
 
