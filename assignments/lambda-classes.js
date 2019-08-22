@@ -74,10 +74,28 @@ class Student extends Person{
         name: 'Fred',
         location: 'Bedrock',
         age: 37,
-        favLanguage: 'JavaScript',
-        specialty: 'Front-end',
+        favLanguage: 'Python',
+        specialty: 'Back-end',
         catchPhrase: `Don't forget the homies`
       });
+
+    const Gabe = new Instructor({
+        name:'Gabe',
+        location:'San Francisco',
+        age:'42',
+        favLanguage:'JavaScript',
+        specialty:'Full-Stack Dev',
+        catchPhrase:'Give me my daily Serotonin!'
+    });
+
+    const Rufus = new Instructor({
+        name:'Rufus',
+        location:'Lagos',
+        age:'45',
+        favLanguage:'PHP',
+        specialty:'Back-end',
+        catchPhrase:'Connect to source'
+    });
 
       
 
