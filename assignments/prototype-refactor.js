@@ -216,8 +216,8 @@ function Truck(feat) {
         this.size = feat.size;
         this.location=feat.location;
       }
-      trasport(){
-        return (`The ${this.name} truck is going to ${this.location}`);
+      transport() {
+        return (`The ${this.name} truck is going to ${this.location}.`);
       }
       calculateSize() {
         return (`${this.name} can contain ${this.size * 100} tonnes.`);
@@ -225,9 +225,9 @@ function Truck(feat) {
   };
 
   class Ford2 extends Truck2{
-      constructor(feat,fordfeat){
-          super(feat,fordfeat);
-          this.isItATruck = fordfeat.isItATruck;
+      constructor(feat){
+          super(feat);
+          this.isItATruck = feat.isItATruck;
       };
   
     isItATruck() {
@@ -241,9 +241,9 @@ function Truck(feat) {
 };
 
   class CAT2 extends Truck2{
-        constructor(feat,catfeat){
+        constructor(feat){
             super(feat);
-            this.isItStick = catfeat.isItStick;
+            this.isItStick =feat.isItStick;
         };
     
     isItStick() {
