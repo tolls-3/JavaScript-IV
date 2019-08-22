@@ -142,6 +142,138 @@ let tolu=new Person2('Tolu',40);
   }
   let Tody = new Baby2('Tody',2,'Scrabble');
 
+
+  /*TASK 4
+
+  Use your imagination and come up with constructors that allow to build objects
+  With amazing and original capabilities. Build 3 small ones, or a very
+  complicated one with lots of state. Surprise us!
+
+function Truck(feat) {
+    this.type = feat.type;
+    this.name = feat.name;
+    this.size = feat.size;
+    this.location=feat.location;
+  }
+  
+  Truck.prototype.transport = function() {
+    console.log(`The ${this.name} truck is going to ${this.location}`);
+  };
+  
+  Truck.prototype.calculateSize = function() {
+    console.log(`${this.name} can contain ${this.size * 100} tonnes.`);
+  };
+  
+  function Ford(fordfeat) {
+    Truck.call(this, fordfeat);
+    this.isItATruck = fordfeat.isItATruck;
+  }
+  Ford.prototype = Object.create(Truck.prototype);
+  
+  Ford.prototype.isItATruck = function() {
+    if(this.isItATruck) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+  
+  function CAT(catfeat) {
+    Truck.call(this, catfeat);
+    this.isItStick = catfeat.isItStick;
+  }
+  
+  CAT.prototype = Object.create(Truck.prototype);
+  CAT.prototype.isItStick = function() {
+    if(this.isItStick) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+  
+  const newFord = new Ford({
+    isItATruck: true,
+    type: 'Truck',
+    name: 'Ford',
+    size: 10,
+    location:'Lagos'
+  });
+  
+  const newCAT = new CAT({
+    isItStick: true,
+    type: 'Truck',
+    name: 'CAT',
+    size: 20,
+    location:'Abuja'
+  });
+  */
+
+  class Truck2{
+      constructor(feat){
+        this.type = feat.type;
+        this.name = feat.name;
+        this.size = feat.size;
+        this.location=feat.location;
+      }
+      trasport(){
+        return (`The ${this.name} truck is going to ${this.location}`);
+      }
+      calculateSize() {
+        return (`${this.name} can contain ${this.size * 100} tonnes.`);
+      };
+  };
+
+  class Ford2 extends Truck2{
+      constructor(feat,fordfeat){
+          super(feat,fordfeat);
+          this.isItATruck = fordfeat.isItATruck;
+      };
+  
+    isItATruck() {
+        if(this.isItATruck) {
+        return true;
+        } 
+        else {
+        return false;
+        }
+    };
+};
+
+  class CAT2 extends Truck2{
+        constructor(feat,catfeat){
+            super(feat);
+            this.isItStick = catfeat.isItStick;
+        };
+    
+    isItStick() {
+        if(this.isItStick) {
+        return true;
+        } else {
+        return false;
+        };
+    };
+};
+
+let newFord2 = new Ford2({
+    isItATruck: true,
+    type: 'Truck',
+    name: 'Ford',
+    size: 10,
+    location:'Lagos'
+  });
+  
+let newCAT2 = new CAT2({
+    isItStick: true,
+    type: 'Truck',
+    name: 'CAT',
+    size: 20,
+    location:'Abuja'
+  });
+
+
+  
+
 //   class Animal2 {
 //     constructor(name) {
 //       this.name = name;
