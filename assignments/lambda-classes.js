@@ -39,7 +39,7 @@ class Student extends Person{
     };
 //Methods for Student constructor    
     listSubjects(){
-        this.favSubjects.forEach(function(subject) {
+        this.favSubjects.forEach(subject => {
             console.log(`${subject}`);
     });
     }
